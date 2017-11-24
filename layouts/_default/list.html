@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }}</title>
+        {{ .Hugo.Generator }}
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+        <h1 style="text-align: center; margin: 40px; font-family: Tahoma, sans-serif;">{{ .Title }}</h1>
+        <div class="main-content">{{ .Content }}</div>
+        
+        {{ range .Pages }}
+            <div style="border: 1px solid black; width: 80%; padding: 10px; margin: 20px auto; border-radius: 5px;">
+                <a href="{{.URL}}" style>            
+                <h2 style="font-family: Tahoma, sans-serif;">{{.Title}}</h2>
+                </a>
+                <p style="font-family: Helvetica, Arial, sans-serif;">{{.Summary}} . . .</p>
+            </div>
+        {{ end }}
+    </body>
+</html>

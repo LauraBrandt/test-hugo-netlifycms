@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: master
+  repo: LauraBrandt/test-hugo-netlifycms
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "test"
+    label: "Test Post"
+    folder: "content/test"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }}</title>
+        {{ .Hugo.Generator }}
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+        <h2 style="text-align: center; margin: 40px; font-family: Tahoma, sans-serif;">{{ .Title }}</h2>
+        <div class="main-content" style="width: 60%; margin: auto; font-family: Helvetica, Arial, sans-serif;">
+            {{ .Content }}
+        </div>
+    </body>
+</html>
