@@ -14,7 +14,7 @@
             <p>{{ .Params.boolean }}</p>
             <p>{{ .Params.text }}</p>
             <p>{{ .Params.number }}</p>
-            <p>{{ .Params.markdown }}</p>
+            <p>{{ .Params.markdown | markdownify }}</p>
             <p>{{ .Params.datetime }}</p>
             <p>{{ .Params.date }}</p>
             <img src="{{ .Params.image }}">
