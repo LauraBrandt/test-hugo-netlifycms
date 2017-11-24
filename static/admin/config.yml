@@ -23,3 +23,21 @@ collections:
       - {label: "File", name: "file", widget: "file"}
       - {label: "Select", name: "select", widget: "select", options: ["a", "b", "c"]}
       - {label: "Hidden", name: "hidden", widget: "hidden", default: "hidden"}
+
+- name: "lists"
+    label: "List Test"
+    folder: "content/list"
+    create: true
+    fields:
+      - {label: "Comma List", name: commaList, widget: list, default: ['term_1', 'term_2']}
+      - label: "Nested List Multiple"
+        name: nestedListMultiple
+        widget: list
+        fields:
+          - {label: Name, name: name, widget: string}
+          - {label: Description, name: description, widget: string}
+      - label: "Nested List Single"
+          name: nestedListSingle
+          widget: list
+          field:
+            - {label: Name, name: name, widget: string}

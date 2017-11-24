@@ -14,13 +14,17 @@
             <p>{{ .Params.boolean }}</p>
             <p>{{ .Params.text }}</p>
             <p>{{ .Params.number }}</p>
-            <p>{{ .Params.markdown | markdownify }}</p>
+            <p>{{ markdownify .Params.markdown }}</p>
             <p>{{ .Params.datetime }}</p>
             <p>{{ .Params.date }}</p>
-            <img src="{{ .Params.image }}">
+            <img src="{{ .Params.image }}"><br>
             <a href="{{.Params.file}}">{{.Params.file}}</a>
             <p>{{ .Params.select }}</p>
             <p>{{ .Params.hidden }}</p>
+            
+            <div>{{ .Params.commaList }}</div>
+            <div>{{ .Params.nestedListMultiple }}</div>
+            <div>{{ .Params.nestedListSingle }}</div>
         </div>
     </body>
 </html>
