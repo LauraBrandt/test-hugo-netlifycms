@@ -1,0 +1,32 @@
+look at others' code for poll thing
+submit poll thing to fcc
+
+go through bookmarks
+
+react+redux lessons on alpha
+
+projects:
+	personal portfolio
+	drum machine (react+redux?)
+	calculator (react+redux?)
+	pomodoro clock (react+redux?)
+	Build a Camper Leaderboard *
+	Build a Recipe Box *
+	Build the Game of Life *
+	Build a Roguelike Dungeon Crawler Game *
+	[* - on main fcc page, turn projects in there]
+
+beta data visualization section, projects on both beta and main site
+
+main fcc web app projects
+
+Wes Bos courses
+
+other beta stuff?
+
+pollplace - make add options not change position with addition of scroll bar?
+disable multiple voting
+
+
+promises
+slack
