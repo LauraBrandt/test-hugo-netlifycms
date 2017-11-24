@@ -28,6 +28,7 @@ collections:
     folder: "content/list"
     create: true
     fields:
+      - {label: "Title", name: title, widget: string}
       - {label: "Comma List", name: commaList, widget: list, default: ['term_1', 'term_2']}
       - label: "Nested List Multiple"
         name: nestedListMultiple
