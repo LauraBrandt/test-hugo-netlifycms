@@ -24,7 +24,17 @@
             
             <div>{{ .Params.commaList }}</div>
             <div>{{ .Params.nestedListMultiple }}</div>
+            <div>{{ .Params.nestedListMultiple }}
+                {{ range .Params.nestedListMultiple }}
+                    {{ . }}
+                {{ end }}
+            </div>
             <div>{{ .Params.nestedListSingle }}</div>
+            <div>{{ .Params.nestedListSingle }}
+                {{ range .Params.nestedListSingle }}
+                    {{ . }}
+                {{ end }}
+            </div>
         </div>
     </body>
 </html>
