@@ -10,26 +10,26 @@
     <body>
         <h2 style="text-align: center; margin: 40px; font-family: Tahoma, sans-serif;">{{ .Title }}</h2>
         <div class="main-content" style="width: 60%; margin: auto; font-family: Helvetica, Arial, sans-serif;">
-            <div>{{ .Content }}</div>
-            <p>{{ .Params.boolean }}</p>
-            <p>{{ .Params.text }}</p>
-            <p>{{ .Params.number }}</p>
-            <p>{{ markdownify .Params.markdown }}</p>
-            <p>{{ .Params.datetime }}</p>
-            <p>{{ .Params.date }}</p>
-            <img src="{{ .Params.image }}"><br>
-            <a href="{{.Params.file}}">{{.Params.file}}</a>
-            <p>{{ .Params.select }}</p>
-            <p>{{ .Params.hidden }}</p>
+            <div>Content: <br> {{ .Content }}</div>
+            <p>boolean: {{ .Params.boolean }}</p>
+            <p>text: {{ .Params.text }}</p>
+            <p>number: {{ .Params.number }}</p>
+            <p>markdown: {{ markdownify .Params.markdown }}</p>
+            <p>datetime: {{ .Params.datetime }}</p>
+            <p>date: {{ .Params.date }}</p>
+            <span>image: </span><img src="{{ .Params.image }}"><br>
+            <span>file: </span><a href="{{.Params.file}}">{{.Params.file}}</a>
+            <p>select: {{ .Params.select }}</p>
+            <p>hidden: {{ .Params.hidden }}</p>
             
-            <div>{{ .Params.commaList }}</div>
-            <div>{{ .Params.nestedListMultiple }}</div>
+            <div>commaList: {{ .Params.commaList }}</div>
+            <div>nestedListMultiple: {{ .Params.nestedListMultiple }}</div>
             <div>{{ .Params.nestedListMultiple }}
                 {{ range .Params.nestedListMultiple }}
-                    {{ . }}
+                    {{ . }} / {{ .name }} / {{ .description }} <br>
                 {{ end }}
             </div>
-            <div>{{ .Params.nestedListSingle }}</div>
+            <div>nestedListSingle: {{ .Params.nestedListSingle }}</div>
             <div>{{ .Params.nestedListSingle }}
                 {{ range .Params.nestedListSingle }}
                     {{ . }}
