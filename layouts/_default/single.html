@@ -10,7 +10,17 @@
     <body>
         <h2 style="text-align: center; margin: 40px; font-family: Tahoma, sans-serif;">{{ .Title }}</h2>
         <div class="main-content" style="width: 60%; margin: auto; font-family: Helvetica, Arial, sans-serif;">
-            {{ .Content }}
+            <div>{{ .Content }}</div>
+            <p>{{ .Params.boolean }}</p>
+            <p>{{ .Params.text }}</p>
+            <p>{{ .Params.number }}</p>
+            <p>{{ .Params.markdown }}</p>
+            <p>{{ .Params.datetime }}</p>
+            <p>{{ .Params.date }}</p>
+            <img src="{{ .Params.image }}">
+            <a href="{{.Params.file}}">{{.Params.file}}</a>
+            <p>{{ .Params.select }}</p>
+            <p>{{ .Params.hidden }}</p>
         </div>
     </body>
 </html>
