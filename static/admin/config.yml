@@ -41,3 +41,4 @@ collections:
       - {label: "Markdown List", name: markdownList, widget: list, fields: [{label: "markdown item", name: markdownitem, widget: markdown}], required: false}
       - {label: "Image List", name: imageList, widget: list, fields: [{label: "image", name: imageitem, widget: image}, {label: "alt-text", name: altitem, widget: string}], required: false}
       - {label: "File List", name: fileList, widget: list, fields: [{label: "file name", name: filenameitem, widget: string}, {label: "file", name: fileitem, widget: file}], required: false}
+      - {label: "Date List", name: dateList, widget: list, fields: [{label: "date", name: dateitem, widget: date}], required: false}
