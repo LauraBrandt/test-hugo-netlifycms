@@ -120,7 +120,30 @@
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
-                        {{ . }}<br>
+                        {{ . }} / {{ markdownify .markdownitem }}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.imageList }}
+                <div>Image List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }} / {{ .imageitem }}<br>
+                        <img src="{{.imageitem}}" alt="{{.altitem}}">
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+            {{ with .Params.fileList }}
+                <div>File List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }} / {{ .fileitem }}<br>
+                        <a href="{{.fileitem}}">{{.filenameitem}}</a>
                     {{ end }}
                 </div>
                 <br>

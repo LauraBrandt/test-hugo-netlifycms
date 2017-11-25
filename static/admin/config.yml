@@ -29,7 +29,7 @@ collections:
     create: true
     fields:
       - {label: "Title", name: title, widget: string}
-      - {label: "Comma List", name: commaList, widget: list, default: ['term_1', 'term_2'], required: false}
+      - {label: "Comma List", name: commaList, widget: list, required: false}
       - {label: "Nested List Multiple", name: nestedListMultiple, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Description, name: description, widget: string}], required: false}
       - {label: "Nested List Single", name: nestedListSingle, widget: list, fields: [{label: Name, name: name, widget: string}], required: false}
       - {label: "Nested List Single Field", name: nestedListSingleField, widget: list, field: [{label: Name, name: name, widget: string}], required: false}
@@ -39,3 +39,5 @@ collections:
       - {label: "Number List", name: numberList, widget: list, fields: [{label: "number item", name: numberitem, widget: number}], required: false}
       - {label: "Select List", name: selectList, widget: list, fields: [{label: "select item", name: selectitem, widget: select, options: ["a", "b"]}], required: false}
       - {label: "Markdown List", name: markdownList, widget: list, fields: [{label: "markdown item", name: markdownitem, widget: markdown}], required: false}
+      - {label: "Image List", name: imageList, widget: list, fields: [{label: "image", name: imageitem, widget: image}, {label: "alt-text", name: altitem, widget: string}], required: false}
+      - {label: "File List", name: fileList, widget: list, fields: [{label: "file name", name: filenameitem, widget: string}, {label: "file", name: fileitem, widget: file}], required: false}
