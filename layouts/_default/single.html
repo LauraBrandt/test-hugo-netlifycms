@@ -132,18 +132,30 @@
                 <div>
                     {{ range . }}
                         {{ . }} / {{ .imageitem }}<br>
-                        <img src="{{.imageitem}}" alt="{{.altitem}}">
+                        <img src="{{.imageitem}}" alt="{{.altitem}}"><br>
                     {{ end }}
                 </div>
                 <br>
             {{ end }}
+
             {{ with .Params.fileList }}
                 <div>File List: {{ . }}</div>
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
                         {{ . }} / {{ .fileitem }}<br>
-                        <a href="{{.fileitem}}">{{.filenameitem}}</a>
+                        <a href="{{.fileitem}}">{{.filenameitem}}</a><br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.dateList }}
+                <div>Date List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }}<br>
                     {{ end }}
                 </div>
                 <br>
