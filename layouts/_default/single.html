@@ -76,7 +76,29 @@
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
-                        {{ . }} / {{.bool1}} / {{.bool2}}<br>
+                        {{ . }} / {{.bool1}}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.textList }}
+                <div>Boolean List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }} / {{.bool1}}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.numberList }}
+                <div>Boolean List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }} / {{.bool1}}<br>
                     {{ end }}
                 </div>
                 <br>
