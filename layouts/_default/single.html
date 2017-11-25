@@ -72,7 +72,7 @@
             {{ end }}
 
             {{ with .Params.listBooleanSingle }}
-                <div>Boolean List: {{ . }}</div>
+                <div>Boolean List Single: {{ . }}</div>
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
@@ -83,22 +83,44 @@
             {{ end }}
 
             {{ with .Params.textList }}
-                <div>Boolean List: {{ . }}</div>
+                <div>Text List: {{ . }}</div>
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
-                        {{ . }} / {{.bool1}}<br>
+                        {{ . }}<br>
                     {{ end }}
                 </div>
                 <br>
             {{ end }}
 
             {{ with .Params.numberList }}
-                <div>Boolean List: {{ . }}</div>
+                <div>Number List: {{ . }}</div>
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
-                        {{ . }} / {{.bool1}}<br>
+                        {{ . }}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.selectList }}
+                <div>Select List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.markdownList }}
+                <div>Markdown List: {{ markdownify . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }}<br>
                     {{ end }}
                 </div>
                 <br>

@@ -37,3 +37,5 @@ collections:
       - {label: "List Boolean Single", name: listBooleanSingle, widget: list, fields: [{label: bool1, name: bool1, widget: boolean}], required: false}
       - {label: "Text List", name: textList, widget: list, fields: [{label: textitem, name: textitem, widget: text}], required: false}
       - {label: "Number List", name: numberList, widget: list, fields: [{label: "number item", name: numberitem, widget: number}], required: false}
+      - {label: "Select List", name: selectList, widget: list, fields: [{label: "select item", name: selectitem, widget: select, options: ["a", "b"]}], required: false}
+      - {label: "Markdown List", name: markdownList, widget: list, fields: [{label: "markdown item", name: markdownitem, widget: markdown}], required: false}
