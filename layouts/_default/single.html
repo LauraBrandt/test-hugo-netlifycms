@@ -26,7 +26,7 @@
             <br>            
             <div>nestedListMultiple: {{ .Params.nestedListMultiple }}</div>
             <p>Loop:</p>
-            <div>{{ .Params.nestedListMultiple }}
+            <div>
                 {{ range .Params.nestedListMultiple }}
                     {{ . }} / {{ .name }} / {{ .description }} <br>
                 {{ end }}
@@ -34,7 +34,7 @@
             <br>
             <div>nestedListSingle: {{ .Params.nestedListSingle }}</div>
             <p>Loop:</p>
-            <div>{{ .Params.nestedListSingle }}
+            <div>
                 {{ range .Params.nestedListSingle }}
                     {{ . }}<br>
                 {{ end }}
