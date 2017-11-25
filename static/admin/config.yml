@@ -42,4 +42,11 @@ collections:
       - {label: "Image List", name: imageList, widget: list, fields: [{label: "image", name: imageitem, widget: image}, {label: "alt-text", name: altitem, widget: string}], required: false}
       - {label: "File List", name: fileList, widget: list, fields: [{label: "file name", name: filenameitem, widget: string}, {label: "file", name: fileitem, widget: file}], required: false}
       - {label: "Date List", name: dateList, widget: list, fields: [{label: "date", name: dateitem, widget: date}], required: false}
-
+  - name: "lists"
+    label: "List Test"
+    folder: "content/list"
+    create: true
+    fields:
+      - {label: "Title", name: title, widget: string}
+      - {label: "Object string", name: objectString, widget: "object", fields: [{label: "description", name: description, widget: string}], required: false }
+      - {label: "Object date", name: objectDate, widget: "object", fields: [{label: "Date", name: date, widget: date}], required: false }

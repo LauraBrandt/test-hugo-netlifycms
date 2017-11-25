@@ -160,6 +160,28 @@
                 </div>
                 <br>
             {{ end }}
+
+            {{ with .Params.objectString }}
+                <div>Object date: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.objectDate }}
+                <div>Object date: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
         </div>
     </body>
 </html>
