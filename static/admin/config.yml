@@ -50,3 +50,10 @@ collections:
       - {label: "Title", name: title, widget: string}
       - {label: "Object string", name: objectString, widget: "object", fields: [{label: "description", name: description, widget: string}], required: false }
       - {label: "Object date", name: objectDate, widget: "object", fields: [{label: "Date", name: date, widget: date}], required: false }
+  - name: "datelist"
+    label: "Only Date List Test"
+    folder: "content/datelist"
+    create: true
+    fields:
+      - {label: "Title", name: title, widget: string}
+      - {label: "Date List", name: dateList, widget: list, fields: [{label: "date", name: dateitem, widget: date}], required: false}
