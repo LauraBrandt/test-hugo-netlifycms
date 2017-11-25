@@ -39,6 +39,13 @@
                     {{ . }}<br>
                 {{ end }}
             </div>
+            <div>Boolean List: {{ .Params.listBoolean }}</div>
+            <p>Loop:</p>
+            <div>
+                {{ range .Params.listBoolean }}
+                    {{ . }} / {{.bool1}} / {{.bool2}}<br>
+                {{ end }}
+            </div>
         </div>
     </body>
 </html>
