@@ -36,7 +36,7 @@
             <p>Loop:</p>
             <div>{{ .Params.nestedListSingle }}
                 {{ range .Params.nestedListSingle }}
-                    {{ . }} / {{.Params.nestedListSingle.name}} / {{.Params.nestedListSingle.description}}<br>
+                    {{ . }}<br>
                 {{ end }}
             </div>
         </div>
