@@ -23,10 +23,9 @@
             <p>hidden: {{ .Params.hidden }}</p>
             
             <div>commaList: {{ .Params.commaList }}</div>
-            <br>
+            <br>            
             <div>nestedListMultiple: {{ .Params.nestedListMultiple }}</div>
             <p>Loop:</p>
-
             <div>{{ .Params.nestedListMultiple }}
                 {{ range .Params.nestedListMultiple }}
                     {{ . }} / {{ .name }} / {{ .description }} <br>
