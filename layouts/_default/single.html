@@ -116,7 +116,7 @@
             {{ end }}
 
             {{ with .Params.markdownList }}
-                <div>Markdown List: {{ markdownify . }}</div>
+                <div>Markdown List: {{ . }}</div>
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
