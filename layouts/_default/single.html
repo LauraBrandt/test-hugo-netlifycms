@@ -10,42 +10,77 @@
     <body>
         <h2 style="text-align: center; margin: 40px; font-family: Tahoma, sans-serif;">{{ .Title }}</h2>
         <div class="main-content" style="width: 60%; margin: auto; font-family: Helvetica, Arial, sans-serif;">
-            <div>Content: <br> {{ .Content }}</div>
-            <p>boolean: {{ .Params.boolean }}</p>
-            <p>text: {{ .Params.text }}</p>
-            <p>number: {{ .Params.number }}</p>
-            <p>markdown: {{ markdownify .Params.markdown }}</p>
-            <p>datetime: {{ .Params.datetime }}</p>
-            <p>date: {{ .Params.date }}</p>
-            <span>image: </span><img src="{{ .Params.image }}"><br>
-            <span>file: </span><a href="{{.Params.file}}">{{.Params.file}}</a>
-            <p>select: {{ .Params.select }}</p>
-            <p>hidden: {{ .Params.hidden }}</p>
-            
-            <div>commaList: {{ .Params.commaList }}</div>
-            <br>            
-            <div>nestedListMultiple: {{ .Params.nestedListMultiple }}</div>
-            <p>Loop:</p>
-            <div>
-                {{ range .Params.nestedListMultiple }}
-                    {{ . }} / {{ .name }} / {{ .description }} <br>
-                {{ end }}
-            </div>
-            <br>
-            <div>nestedListSingle: {{ .Params.nestedListSingle }}</div>
-            <p>Loop:</p>
-            <div>
-                {{ range .Params.nestedListSingle }}
-                    {{ . }}<br>
-                {{ end }}
-            </div>
-            <div>Boolean List: {{ .Params.listBoolean }}</div>
-            <p>Loop:</p>
-            <div>
-                {{ range .Params.listBoolean }}
-                    {{ . }} / {{.bool1}} / {{.bool2}}<br>
-                {{ end }}
-            </div>
+            {{ with .Content }}<div>Content: <br> {{ . }}</div>{{end}}
+            {{ with .Params.boolean }}<p>boolean: {{ . }}</p>{{end}}
+            {{ with .Params.text }}<p>text: {{ . }}</p>{{end}}
+            {{ with .Params.number }}<p>number: {{ . }}</p>{{end}}
+            {{ with .Params.markdown }}<p>markdown: {{ markdownify . }}</p>{{end}}
+            {{ with .Params.datetime }}<p>datetime: {{ . }}</p>{{end}}
+            {{ with .Params.date }}<p>date: {{ . }}</p>{{end}}
+            {{ with .Params.image }}<span>image: </span><img src="{{ . }}">{{end}}<br>
+            {{ with .Params.file }}<span>file: </span><a href="{{.}}">{{.}}</a>{{end}}
+            {{ with .Params.select }}<p>select: {{ . }}</p>{{end}}
+            {{ with .Params.hidden }}<p>hidden: {{ . }}</p>{{end}}
+
+            {{ with .Params.commaList }}
+                <div>commaList: {{ . }}</div>
+                <br>
+            {{end}}
+
+            {{ with .Params.nestedListMultiple }}
+                <div>nestedListMultiple: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }} / {{ .name }} / {{ .description }} <br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.nestedListSingle }}
+                <div>nestedListSingle: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.nestedListSingleField }}
+                <div>nestedListSingleField: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.listBoolean }}
+                <div>Boolean List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }} / {{.bool1}} / {{.bool2}}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
+
+            {{ with .Params.listBooleanSingle }}
+                <div>Boolean List: {{ . }}</div>
+                <p>Loop:</p>
+                <div>
+                    {{ range . }}
+                        {{ . }} / {{.bool1}} / {{.bool2}}<br>
+                    {{ end }}
+                </div>
+                <br>
+            {{ end }}
         </div>
     </body>
 </html>
