@@ -56,4 +56,5 @@ collections:
     create: true
     fields:
       - {label: "Title", name: title, widget: string}
+      - {label: "String List", name: stringList, widget: list, fields: [{label: "string", name: stringitem, widget: string}], required: false}
       - {label: "Date List", name: dateList, widget: list, fields: [{label: "date", name: dateitem, widget: date}], required: false}
