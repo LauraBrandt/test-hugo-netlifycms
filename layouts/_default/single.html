@@ -16,7 +16,7 @@
             {{ with .Params.number }}<p>number: {{ . }}</p>{{end}}
             {{ with .Params.markdown }}<p>markdown: {{ markdownify . }}</p>{{end}}
             {{ with .Params.datetime }}<p>datetime: {{ . }}</p>{{end}}
-            {{ with .Params.date }}<p>date: {{ . }}</p>{{end}}
+            {{ with .Params.date }}<p>date: {{ . }}  {{ .Format "Jan 2 15:04:05 2006 MST" }}</p>{{end}}
             {{ with .Params.image }}<span>image: </span><img src="{{ . }}">{{end}}<br>
             {{ with .Params.file }}<span>file: </span><a href="{{.}}">{{.}}</a>{{end}}
             {{ with .Params.select }}<p>select: {{ . }}</p>{{end}}
