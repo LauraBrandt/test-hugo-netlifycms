@@ -155,7 +155,7 @@
                 <p>Loop:</p>
                 <div>
                     {{ range . }}
-                        {{ . }}<br>
+                        {{ . }} {{ .dateitem.Format "Jan 2 15:04:05 2006 MST" }}<br>
                     {{ end }}
                 </div>
                 <br>
