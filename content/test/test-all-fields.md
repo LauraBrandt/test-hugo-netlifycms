@@ -12,7 +12,7 @@ markdown: |-
   * markdown
   * section
 datetime: 2017-11-29T22:00:52.000Z
-date: 2017-11-24T23:07:52.822Z
+date: 2017-11-08T20:07:52-03:00
 image: /img/cat-thinking.jpg
 file: /img/todo.txt
 select: b
